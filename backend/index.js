@@ -16,12 +16,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-/*const corsOptions = {
+const corsOptions = {
     origin:"http://localhost:5173",
     credentials:true
 }
-app.use(cors(corsOptions));*/
-const allowedOrigins = [
+app.use(cors(corsOptions));
+/*const allowedOrigins = [
   "http://localhost:5173",
   process.env.FRONTEND_URL // ✅ This will be set in Render
 ];
@@ -37,7 +37,7 @@ const corsOptions = {
   credentials: true
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));*/
 
 
 const PORT = process.env.PORT || 3000;
